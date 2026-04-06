@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>Tickets - MonoMuse</title>
+</head>
+<body onload="addYear(); ActiveNav();">
+    <div class="container">
+        <header class="header">
+            <h1>Buy Tickets</h1>
+        </header>
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a id="navselected" href="buytickets.html">Tickets</a>
+        </nav>
+
+        <main class=”main>
+            
+            <section id="tickets">
+                <h2>Ticket Prices & Schedule</h2>
+                <table border="1">
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>General</td>
+                        <td>Standard admission for one adult visitor</td>
+                        <td>$20</td>
+                    </tr>
+                    <tr>
+                        <td>Student</td>
+                        <td>Discounted admission with valid student ID</td>
+                        <td>$12</td>
+                    </tr>
+                    <tr>
+                        <td>Member</td>
+                        <td>Free admission for museum members</td>
+                        <td>$0</td>
+                    </tr>
+                </table>
+
+                <table border="1">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Event</th>
+                        <th>Buy</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>May 3, 2026</td>
+                        <td>Sunday</td>
+                        <td>Digital Echoes</td>
+                        <td><button onclick="showForm()">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>May 10, 2026</td>
+                        <td>Sunday</td>
+                        <td>Code/Canvas</td>
+                        <td><button onclick="showForm()">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>May 17, 2026</td>
+                        <td>Sunday</td>
+                        <td>Future Memory</td>
+                        <td><button onclick="showForm()">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>May 24, 2026</td>
+                        <td>Sunday</td>
+                        <td>Digital Echoes</td>
+                        <td><button onclick="showForm()">Buy Now</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="purchaseSection">
+                <h3>Purchase Tickets</h3>
+
+                <form id="purchaseForm">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="tickets">Number of Tickets:</label><br>
+                    <input type="number" id="tickets" name="tickets" min="1" required><br><br>
+
+                    <label for="date">Select Date:</label><br>
+                    <select id="date" name="date" required>
+                    <option value="">--Choose a date--</option>
+                    <option value="May 3, 2026">May 3, 2026 - Digital Echoes</option>
+                    <option value="May 10, 2026">May 10, 2026 - Code/Canvas</option>
+                    <option value="May 17, 2026">May 17, 2026 - Future Memory</option>
+                    <option value="May 24, 2026">May 24, 2026 - Digital Echoes</option>
+                    </select><br><br>
+
+                    <!-- NEW Ticket Type Dropdown -->
+                    <label for="ticketType">Ticket Type:</label><br>
+                    <select id="ticketType" name="ticketType" required>
+                    <option value="">--Select ticket type--</option>
+                    <option value="general">General</option>
+                    <option value="student">Student</option>
+                    <option value="member">Member</option>
+                    </select><br><br>
+
+                    <button type="submit" onclick="alert('Redirecting to payment system.')">Submit Purchase</button>
+                </form>
+            </section>
+        </main>
+        <figure class="main_figure"></figure>
+        <footer>
+            <p id="copyYear">© 2026 MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
