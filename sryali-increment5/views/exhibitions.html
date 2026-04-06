@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions - MonoMuse</title>
+</head>
+<body onload="addYear(); ActiveNav();">
+    <div class="container">
+        <header class="header">
+            <h1>Exhibitions</h1>
+        </header>
+        <nav id="navBar" class="nav_bar">
+            <div id="navLinks" class="nav-links"></div>
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a id="navselected" href="exhibitions.html">Exhibitions</a>
+                <a href="buytickets.html">Buy Tickets</a>
+            </div>
+            <div class="hburger" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+
+        <main class=”main>
+            <h3>Digital Echoes</h3>
+            <p>
+                This exhibition explores how artists use projection, sound, and motion sensors to create
+                interactive spaces that respond directly to visitors.
+            </p>
+
+            <h3>Code / Canvas</h3>
+            <p>
+                Code / Canvas highlights works that combine traditional artistic practice with generative
+                algorithms, showing how programming can become a creative medium.
+            </p>
+
+            <h3>Future Memory</h3>
+            <p>
+                Through video installations and immersive storytelling, Future Memory invites visitors to
+                consider how technology shapes the way we record, preserve, and reinterpret human experience.
+            </p>
+        </main>
+        <iframe class="video" src="https://www.youtube.com/embed/DN9z4zpgCts?si=2Y5byrlQWcrJY6KI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figure class="main_figure"></figure>
+        <footer>
+            <p id="copyYear">© 2026 MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
