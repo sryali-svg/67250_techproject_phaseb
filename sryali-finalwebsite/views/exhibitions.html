@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions - MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+        crossorigin="anonymous"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear(); ActiveNav();">
+    <div class="container exhibitions-container">
+
+        <!-- <header class="top-bar exhibitions-top-bar">
+            <h1 class="page-title">Exhibitions</h1>
+
+            <nav id="navBar" class="nav-bar">
+                <div id="navLinks" class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="explore.html">About</a>
+                    <a id="navselected" href="exhibitions.html">Exhibitions</a>
+                    <a href="buytickets.html">Buy Tickets</a>
+                </div>
+
+                <div class="hburger" onclick="toggleMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </header>-->
+
+        <header class="top-bar">
+            <h1 class="page-title">Exhibitions</h1>
+            
+            <nav class="nav-bar">
+               <a href="../index.html">Home</a>
+                <a href="explore.html">About</a>
+                <a id="navselected" href="exhibitions.html">Exhibitions</a>
+                <a id="ticketscall"href="buytickets.html">Buy Tickets</a>
+            </nav>
+        </header>
+
+        <main class="exhibitions-layout">
+            <section class="exhibition-row">
+                <div class="exhibition-media">
+                    <div class="slideshow pollock-slideshow">
+                        <img src="../static/pollockpasiphae.jpeg" class="slide active" alt="Jackson Pollock artwork 1">
+                        <img src="../static/pollocknumber18.jpg" class="slide" alt="Jackson Pollock artwork 2">
+                        <img src="../static/pollocknumber1a.png" class="slide" alt="Jackson Pollock artwork 3">
+
+                        <button class="slide-btn prev" onclick="changeSlide('pollock', -1)">&#10094;</button>
+                        <button class="slide-btn next" onclick="changeSlide('pollock', 1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="exhibition-text">
+                    <h2>Jackson Pollock</h2>
+                    <p>
+                        Jackson Pollock helped redefine modern painting through his energetic drip technique
+                        and large-scale abstract compositions. His work emphasized movement, spontaneity,
+                        and gesture, transforming the canvas into a record of physical action.
+                    </p>
+                </div>
+            </section>
+
+            <section class="exhibition-row">
+                <div class="exhibition-media">
+                    <div class="slideshow frankenthaler-slideshow">
+                        <img src="../static/frankenthaler1.jpg" class="slide active" alt="Helen Frankenthaler artwork 1">
+                        <img src="../static/frankenthaler2.jpg" class="slide" alt="Helen Frankenthaler artwork 2">
+                        <img src="../static/frankenthaler3.jpg" class="slide" alt="Helen Frankenthaler artwork 3">
+
+                        <button class="slide-btn prev" onclick="changeSlide('frankenthaler', -1)">&#10094;</button>
+                        <button class="slide-btn next" onclick="changeSlide('frankenthaler', 1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="exhibition-text">
+                    <h2>Helen Frankenthaler</h2>
+                    <p>
+                        Helen Frankenthaler became known for her soak-stain method, which allowed color to
+                        flow directly into unprimed canvas. Her work bridged Abstract Expressionism and Color
+                        Field painting, creating luminous compositions that feel both expansive and intimate.
+                    </p>
+                </div>
+            </section>
+
+            <section class="exhibition-row">
+                <div class="exhibition-media">
+                    <iframe
+                        class="exhibition-video"
+                        src="https://www.youtube.com/embed/y0xbZTe1JSM"
+                        title="Willem de Kooning video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="exhibition-text">
+                    <h2>Willem de Kooning</h2>
+                    <p>
+                        Willem de Kooning’s paintings combined abstraction with the human figure, producing
+                        works that feel intense, layered, and constantly in motion. His approach to form and
+                        brushwork challenged clear boundaries between representation and abstraction.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear">© 2026 MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

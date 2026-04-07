@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - MonoMuse</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear(); ActiveNav();">
+    <div class="container">
+
+        <!-- <header class="top-bar explore-top-bar">
+            <h1 class="page-title">About</h1>
+
+            <nav id="navBar" class="nav-bar">
+                <div id="navLinks" class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a id="navselected" href="explore.html">About</a>
+                    <a href="exhibitions.html">Exhibitions</a>
+                    <a href="buytickets.html">Buy Tickets</a>
+                </div>
+
+                <div class="hburger" onclick="toggleMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </header>-->
+
+         <header class="top-bar">
+            <h1 class="page-title">About</h1>
+
+            <nav class="nav-bar">
+                <a href="../index.html">Home</a>
+                <a id="navselected" href="explore.html">About</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a id="ticketscall"href="buytickets.html">Buy Tickets</a>
+            </nav>
+        </header>
+
+        <main class="explore-layout">
+            <section class="explore-left">
+                <blockquote class="explore-quote">
+                    "The abstraction is often the most definite form for the intangible thing in myself that I can clarify in paint." — Georgia O'Keeffe
+                </blockquote>
+
+                <figure class="explore-image-figure">
+                    <img src="../static/museum.jpg" alt="Exterior view of the MonoMuse museum building" class="explore-image">
+                </figure>
+            </section>
+
+            <section class="explore-right">
+                <section class="explore-info-block">
+                    <button class="info-toggle" type="button">↓ Mission Statement</button>
+                    <div class="info-content">
+                        <p>
+                            MonoMuse is a museum dedicated to connecting its visitors to moments in artistic history. 
+                            By focusing on different artistic movements in each of our seasons, MonoMuse hopes to brings 
+                            its users to the instants in time that transformed the face of the artistic world as we know 
+                            it today. With our current focus, Abstract Expressionism, MonoMuse hopes to connect users 
+                            with transformational ideas of movement, deconstruction, texture, and emotion. 
+                        </p>
+                    </div>
+                </section>
+
+                <section class="explore-info-block">
+                    <button class="info-toggle" type="button">↓ Who We Serve</button>
+                    <div class="info-content">
+                        <p>
+                            MonoMuse’s doors are open to all. We welcome students, families, artists in all forms, 
+                            researchers, and members of our community here in Pittsburgh and beyond. With its 
+                            constantly shifting theme, MonoMuse hopes to bring its visitors back to a place of 
+                            artistic exploration again and again. 
+                        </p>
+                    </div>
+                </section>
+
+                <section class="explore-info-block">
+                    <button class="info-toggle" type="button">↓ Founding</button>
+                    <div class="info-content">
+                        <p>
+                            In 2016, Monomuse was founded as a place to connect with independent
+                            artistic movements, in a more immersive way. By focusing on a single artistic movement at a time,
+                            Monomuse has always sought to create a focused experience that allows visitors to
+                            resonate with the influences, techniques, and unique perspectives that defined these movements. 
+                        </p>
+                    </div>
+                </section>
+
+                <section class="milestones-section">
+                    <h2 class="milestones-title">Visiting The Museum</h2>
+                    <ul class="milestones-list">
+                        <p>
+                            <b>Hours:</b> 9 AM - 5 PM, Monday - Saturday</p>
+                        <i>(Closed on Sundays and major holidays)</i>
+                        <p><b>Address:</b> 123 Innovation Drive, Pittsburgh, PA 15213</p>
+                        <p><b>Email:</b> info@monomuse.org</p>
+                        <p><b>Map:</b></p>
+                    </ul>
+                </section>
+
+                <section class="map-section">
+                    <div id="map"></div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear">© 2026 MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll(".info-toggle").forEach(function(toggle) {
+            toggle.addEventListener("click", function() {
+                const content = this.nextElementSibling;
+                content.classList.toggle("open");
+                this.classList.toggle("open");
+
+                if (content.classList.contains("open")) {
+                    this.textContent = this.textContent.replace("↓", "↑");
+                } else {
+                    this.textContent = this.textContent.replace("↑", "↓");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
